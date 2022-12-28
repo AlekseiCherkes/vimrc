@@ -1,5 +1,6 @@
 # vimrc
-Personal configuration files for NVIM
+
+Personal configuration files for `Vim`/`Neovim`/`IdeaVim`
 
 ## Install
 
