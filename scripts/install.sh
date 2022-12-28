@@ -22,3 +22,8 @@ ln -s `pwd` ~/.config/nvim
 
 popd
 
+echo For using Neovim you have to install Packer and activate it in nvim:
+echo     packadd packer.nvim
+
+echo OK
+
