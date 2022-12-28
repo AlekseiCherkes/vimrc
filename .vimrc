@@ -1,0 +1,1 @@
+echo "HW from vimrc"
