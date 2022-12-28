@@ -17,6 +17,7 @@ echo Installing .ideavimrc...
 ln -s `pwd`/.ideavimrc ~/
 
 echo Installing ~/.config/nvim...
+mkdir -p ~/.config
 ln -s `pwd` ~/.config/nvim
 
 popd
