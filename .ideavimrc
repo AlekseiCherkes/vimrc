@@ -6,4 +6,5 @@ source ~/.vimrc
 
 Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
+Plug 'preservim/nerdtree'
 
