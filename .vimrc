@@ -56,3 +56,6 @@ let mapleader = " "
 " join lines without moving the curson
 :nnoremap J mzJ`z
 
+" hide search results
+:nnoremap <leader>h :noh<CR>
+
