@@ -8,3 +8,6 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
 Plug 'preservim/nerdtree'
 
+:map <leader>t <Action>(ActivateTerminalToolWindow)
+:map <leader>n <Action>(ActivateProjectToolWindow)
+
