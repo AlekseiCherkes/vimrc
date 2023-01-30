@@ -1,10 +1,8 @@
-"
-" Common settings for Vim/Neovim/IdeaVim
-"
+""
+"" Common settings for Vim/Neovim/IdeaVim
+""
 
 set nocompatible
-
-let mapleader = " "
 
 set number
 set relativenumber
@@ -38,4 +36,23 @@ set sidescrolloff=4
 set updatetime=1000
 
 set colorcolumn=120
+
+"
+" Mappings
+"
+
+let mapleader = " "
+
+" cursor always in the center
+:nnoremap <C-d> <C-d>zz
+:nnoremap <C-u> <C-u>zz
+:nnoremap n nzz
+:nnoremap N Nzz
+:nnoremap * *zz
+:nnoremap # #zz
+:nnoremap g* g*zz
+:nnoremap g# g#zz
+
+" join lines without moving the curson
+:nnoremap J mzJ`z
 
