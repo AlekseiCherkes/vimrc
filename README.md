@@ -2,6 +2,10 @@
 
 Personal configuration files for `Vim`/`Neovim`/`IdeaVim`
 
+## Help
+
+- [NERDTree](https://github.com/JetBrains/ideavim/wiki/NERDTree-support#supported-commands)
+
 ## Install
 
 ```
