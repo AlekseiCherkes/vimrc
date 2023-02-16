@@ -10,6 +10,7 @@ vim.cmd("source ~/.vimrc")
 require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'machakann/vim-highlightedyank'
   use {
     'nvim-telescope/telescope.nvim', 
     tag = '0.1.x',
@@ -30,18 +31,18 @@ end)
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all"
   ensure_installed = { 
-	  "help",
-	  "bash",
-	  "cmake", 
-	  "comment", 
-	  "diff", 
-	  "c", 
-	  "cpp", 
-	  "lua",
-	  "vim",
-	  "markdown",
-	  "python",
-	  "rust" 
+    "help",
+    "bash",
+    "cmake",
+    "comment",
+    "diff",
+    "c",
+    "cpp",
+    "lua",
+    "vim",
+    "markdown",
+    "python",
+    "rust"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
