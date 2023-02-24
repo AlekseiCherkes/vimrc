@@ -38,6 +38,12 @@ set updatetime=1000
 set colorcolumn=120
 
 "
+" Clipboard
+"
+
+set clipboard=unnamedplus
+
+"
 " Mappings
 "
 
