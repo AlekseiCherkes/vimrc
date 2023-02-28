@@ -44,6 +44,12 @@ set colorcolumn=120
 set clipboard=unnamedplus
 
 "
+" Russian
+"
+
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+"
 " Mappings
 "
 
