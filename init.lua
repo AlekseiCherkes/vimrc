@@ -26,6 +26,7 @@ require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('preservim/nerdtree')
   use('tpope/vim-fugitive')
+  use('wikitopian/hardmode')
 end)
 
 require('nvim-treesitter.configs').setup {
