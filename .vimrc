@@ -31,8 +31,8 @@ set smartcase
 
 set termguicolors
 
-set scrolloff=8
-set sidescrolloff=4
+set scrolloff=1
+set sidescrolloff=1
 
 set updatetime=1000
 
