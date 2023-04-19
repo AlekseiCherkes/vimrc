@@ -71,4 +71,5 @@ let mapleader = " "
 
 " hide search results
 :nnoremap <leader>h :noh<CR>
+:nnoremap <leader>d "_d
 
