@@ -36,8 +36,6 @@ set sidescrolloff=1
 
 set updatetime=1000
 
-set colorcolumn=120
-
 "
 " Clipboard
 "
