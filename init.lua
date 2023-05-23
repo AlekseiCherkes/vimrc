@@ -126,6 +126,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>n", vim.cmd.NERDTreeFocus)
+vim.keymap.set("n", "<leader>m", vim.cmd.NERDTreeFind)
 vim.keymap.set("n", "<leader>g", vim.cmd.Git)
 
 print("OK")
