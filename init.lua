@@ -24,7 +24,15 @@ require('packer').startup(function(use)
     end
   }
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-  use('preservim/nerdtree')
+  use {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  }
   use('tpope/vim-fugitive')
   use('wikitopian/hardmode')
   use('neovim/nvim-lspconfig')
@@ -125,8 +133,8 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>n", vim.cmd.NERDTreeFocus)
-vim.keymap.set("n", "<leader>m", vim.cmd.NERDTreeFind)
+vim.keymap.set("n", "<leader>n", vim.cmd.NeoTreeFocus)
+vim.keymap.set("n", "<leader>m", vim.cmd.NeoTreeReveal)
 vim.keymap.set("n", "<leader>g", vim.cmd.Git)
 
 print("OK")
