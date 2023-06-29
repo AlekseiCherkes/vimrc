@@ -37,6 +37,8 @@ require('packer').startup(function(use)
   use('wikitopian/hardmode')
   use('neovim/nvim-lspconfig')
   use('lewis6991/gitsigns.nvim')
+  use('vim-airline/vim-airline')
+  use('vim-airline/vim-airline-themes')
 end)
 
 require('nvim-treesitter.configs').setup {
