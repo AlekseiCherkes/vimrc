@@ -1,0 +1,59 @@
+""
+"" Settings for VSCode-neovim plugin
+""
+
+set nocompatible
+
+set number
+set relativenumber
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+set smartindent
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set scrolloff=1
+set sidescrolloff=1
+
+"
+" Clipboard
+"
+
+set clipboard=unnamedplus
+
+"
+" Mappings
+"
+
+let mapleader = " "
+
+" cursor always in the center
+:nnoremap <C-d> <C-d>zz
+:nnoremap <C-u> <C-u>zz
+:nnoremap n nzz
+:nnoremap N Nzz
+:nnoremap * *zz
+:nnoremap # #zz
+:nnoremap g* g*zz
+:nnoremap g# g#zz
+
+" join lines without moving the curson
+:nnoremap J mzJ`z
+
+" hide search results
+:nnoremap <leader>h :noh<CR>
+:nnoremap <leader>d "_d
+
+" It adds motions like 25j and 30k to the jump list, so you can cycle
+" through them with control-o and control-i.
+" source: https://www.vi-improved.org/vim-tips/
+nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
+nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
+
