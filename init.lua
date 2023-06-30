@@ -7,6 +7,9 @@ vim.cmd("source ~/.vimrc")
 -- Only required if you have packer configured as `opt`
 -- vim.cmd [[packadd packer.nvim]]
 
+-- Remove the deprecated commands from v1.x
+vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
 require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -88,6 +91,15 @@ require('nvim-treesitter.configs').setup {
   }
 }
 }
+
+require("neo-tree").setup({
+  filesystem = {
+    use_libuv_file_watcher = true
+  },
+  source_selector = {
+    winbar = true
+  }
+})
 
 require('gitsigns').setup {
   -- Undocumented feature that I need
@@ -186,10 +198,14 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+local nt = require('neo-tree.command')
+vim.keymap.set("n", "<leader>n", function() nt.execute({action = 'focus', source = 'filesystem', reveal = false}) end)
+vim.keymap.set("n", "<leader>r", function() nt.execute({action = 'focus', source = 'filesystem', reveal = true}) end)
+vim.keymap.set("n", "<leader>b", function() nt.execute({action = 'focus', source = 'buffers'}) end)
+vim.keymap.set("n", "<leader>g", function() nt.execute({action = 'focus', source = 'git_status'}) end)
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>n", vim.cmd.NeoTreeFocus)
-vim.keymap.set("n", "<leader>m", vim.cmd.NeoTreeReveal)
-vim.keymap.set("n", "<leader>g", vim.cmd.Git)
+-- vim.keymap.set("n", "<leader>g", vim.cmd.Git)
 
 print("OK")
 
