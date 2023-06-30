@@ -93,11 +93,30 @@ require('nvim-treesitter.configs').setup {
 }
 
 require("neo-tree").setup({
-  filesystem = {
-    use_libuv_file_watcher = true
+  window = {
+    filesystem = {
+      use_libuv_file_watcher = true
+    },
+    source_selector = {
+      winbar = true
+    },
+    mappings = {
+      ["o"] = 'open',
+      ['I'] = 'toggle_hidden',
+      ['/'] = 'noop',
+
+      -- remap '?' to g? like in vim-fugitive since I want to use it for navigation
+      ['?'] = 'noop',
+      ['g?'] = 'show_help' 
+    }
   },
-  source_selector = {
-    winbar = true
+  filesystem = {
+    window = {
+      mappings = {
+        -- disable fuzzy finder
+        ["/"] = "noop"
+      }
+    }
   }
 })
 
@@ -186,7 +205,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
   end,
 })
-
 
 -- 
 -- key mappings
