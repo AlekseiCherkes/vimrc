@@ -81,6 +81,8 @@ let mapleader = " "
 " It adds motions like 25j and 30k to the jump list, so you can cycle
 " through them with control-o and control-i.
 " source: https://www.vi-improved.org/vim-tips/
-nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
-nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
+if !has('ide') " Skip if in IdeaVim
+    nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
+    nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
+endif
 
