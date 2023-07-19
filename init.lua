@@ -42,7 +42,10 @@ require('packer').startup(function(use)
   use('lewis6991/gitsigns.nvim')
   use('vim-airline/vim-airline')
   use('vim-airline/vim-airline-themes')
+  use('kylechui/nvim-surround')
 end)
+
+require("nvim-surround").setup({})
 
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all"
