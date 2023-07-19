@@ -105,7 +105,6 @@ require("neo-tree").setup({
     },
     mappings = {
       ["o"] = 'open',
-      ['I'] = 'toggle_hidden',
       ['/'] = 'noop',
 
       -- remap '?' to g? like in vim-fugitive since I want to use it for navigation
@@ -117,6 +116,7 @@ require("neo-tree").setup({
     window = {
       mappings = {
         -- disable fuzzy finder
+        ['I'] = 'toggle_hidden',
         ["/"] = "noop"
       }
     }
