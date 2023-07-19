@@ -37,6 +37,13 @@ set sidescrolloff=1
 set updatetime=1000
 
 "
+" Command line completion
+"
+
+set wildmenu
+set wildmode=longest,longest:full,full
+
+"
 " Clipboard
 "
 
