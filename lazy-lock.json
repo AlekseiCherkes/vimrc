@@ -1,0 +1,7 @@
+{
+  "github-nvim-theme": { "branch": "main", "commit": "af07dda03f6c7184bfd2cb0c9de4efebb26241d6" },
+  "gruvbox": { "branch": "master", "commit": "f1ecde848f0cdba877acb0c740320568252cc482" },
+  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
+  "tokyonight.nvim": { "branch": "main", "commit": "1ee11019f8a81dac989ae1db1a013e3d582e2033" },
+  "vim": { "branch": "main", "commit": "0e2c7d36b766dcebba2d8a3a0639784446dea086" }
+}
