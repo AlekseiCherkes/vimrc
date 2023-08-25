@@ -51,7 +51,10 @@ return {
     "lewis6991/gitsigns.nvim",
     "vim-airline/vim-airline",
     "vim-airline/vim-airline-themes",
-    "kylechui/nvim-surround",
+    { 
+        "kylechui/nvim-surround", 
+        config = true
+    },
 
     -- Other
     "machakann/vim-highlightedyank",
