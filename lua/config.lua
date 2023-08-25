@@ -1,56 +1,11 @@
---
--- Neovim specific settings
---
-
-vim.cmd("source ~/.vimrc")
-
--- Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
-
--- Remove the deprecated commands from v1.x
-vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use 'machakann/vim-highlightedyank'
-  use {
-    'nvim-telescope/telescope.nvim', 
-    tag = '0.1.x',
-    requires = {{'nvim-lua/plenary.nvim'}}
-  }
-  use {
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end
-  }
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-  use {
-    'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v2.x',
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    }
-  }
-  use('tpope/vim-fugitive')
-  use('wikitopian/hardmode')
-  use('neovim/nvim-lspconfig')
-  use('lewis6991/gitsigns.nvim')
-  use('vim-airline/vim-airline')
-  use('vim-airline/vim-airline-themes')
-  use('kylechui/nvim-surround')
-end)
+-- Copied from old configuration before moving to Lazy
+-- Should be refactored when I have time for that
 
 require("nvim-surround").setup({})
 
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all"
   ensure_installed = { 
-    "help",
     "bash",
     "cmake",
     "comment",
@@ -227,37 +182,4 @@ vim.keymap.set("n", "<leader>g", function() nt.execute({action = 'focus', source
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- vim.keymap.set("n", "<leader>g", vim.cmd.Git)
-
---
--- Experimenting
---
-
-vim.api.nvim_create_user_command(
-    'MyPaths',
-    function ()
-        local function printpath(name, desc)
-            local value = vim.fn.stdpath(name)
-            local str = vim.fn.printf('%s (%s)\n  %s', name, desc, value)
-            print(str)
-        end
-
-        print('=== stdpath ===')
-        printpath('cache', 'Cache directory: arbitrary temporary storage for plugins, etc.')
-        printpath('config', 'User configuration directory. |init.vim| is stored here.')
-        printpath('config_dirs', 'Other configuration directories.')
-        printpath('data', 'User data directory.')
-        printpath('data_dirs', 'Other data directories.')
-        printpath('log', 'Logs directory (for use by plugins too).')
-        printpath('run', 'Run directory: temporary, local storage for sockets, named pipes, etc.')
-        printpath('state', 'Session state directory: storage for file drafts, swap, undo, |shada|.')
-        print('')
-
-        print('=== runtimepath ===')
-        local output = vim.deepcopy(vim.opt.runtimepath:get())
-        table.sort(output)
-        table.foreach(output, function(k, v) print(v) end)
-    end,
-    {})
-
-print("OK")
 
