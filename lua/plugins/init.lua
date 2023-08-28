@@ -21,6 +21,12 @@ return {
         }
     },
 
+    "neovim/nvim-lspconfig",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+    "saadparwaiz1/cmp_luasnip",
+    "L3MON4D3/LuaSnip",
+
     -- Colorthemes
     -- TODO: stick to one of them  
     -- seems like the best due to a lot of optioins
@@ -47,7 +53,6 @@ return {
 
     -- Other 2
     "tpope/vim-fugitive",
-    "neovim/nvim-lspconfig",
     "lewis6991/gitsigns.nvim",
     "vim-airline/vim-airline",
     "vim-airline/vim-airline-themes",
