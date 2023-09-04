@@ -24,10 +24,15 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins spec
 --
 
-require("lazy").setup({
-    "kylechui/nvim-surround",
-    config = true
-})
+require("lazy").setup(
+    {
+        {
+            "kylechui/nvim-surround",
+            config = true
+        },
+        "machakann/vim-highlightedyank"
+    }
+)
 
 print("OK")
 
