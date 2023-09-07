@@ -72,5 +72,6 @@ return {
     -- Other
     "machakann/vim-highlightedyank",
     "wikitopian/hardmode",
+    "chentoast/marks.nvim"
 }
 

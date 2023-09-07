@@ -199,6 +199,12 @@ cmp.setup {
   },
 }
 
+-- 
+-- Marks
+--
+
+require'marks'.setup()
+
 --
 -- key mappings
 --
