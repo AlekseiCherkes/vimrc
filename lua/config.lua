@@ -224,3 +224,8 @@ vim.keymap.set("n", "<leader>g", function() nt.execute({action = 'focus', source
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- vim.keymap.set("n", "<leader>g", vim.cmd.Git)
 
+-- Experimenting with nvim-osc52
+vim.keymap.set('n', '<leader>y', require('osc52').copy_operator, {expr = true, desc = "Yank operator using osc52"})
+vim.keymap.set('n', '<leader>yy', '<leader>y_', {remap = true, desc = "Yank line using osc52"})
+vim.keymap.set('v', '<leader>y', require('osc52').copy_visual, {desc = "Yank visual using osc52"})
+

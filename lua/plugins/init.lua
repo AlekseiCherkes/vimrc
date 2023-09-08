@@ -72,6 +72,7 @@ return {
     -- Other
     "machakann/vim-highlightedyank",
     "wikitopian/hardmode",
-    "chentoast/marks.nvim"
+    "chentoast/marks.nvim",
+    "ojroques/nvim-osc52"
 }
 
