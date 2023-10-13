@@ -10,7 +10,7 @@ Plug 'preservim/nerdtree'
 
 :map <leader>t <Action>(ActivateTerminalToolWindow)
 :map <leader>n <Action>(ActivateProjectToolWindow)
-:map <leader>s <Action>(SelectInProjectView)
+:map <leader>r <Action>(SelectInProjectView)
 
 set clipboard+=ideaput
 
