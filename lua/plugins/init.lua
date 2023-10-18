@@ -1,6 +1,9 @@
 return {
     -- Essential
     {
+        "williamboman/mason.nvim"
+    },
+    {
         'nvim-telescope/telescope.nvim', 
         versions = '0.1.x',
         dependencies = {
