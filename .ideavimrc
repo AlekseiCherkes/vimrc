@@ -8,9 +8,12 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
 Plug 'preservim/nerdtree'
 
+" Fixes navigation history between files
+:nmap <C-o> :action Back<CR>
+:nmap <C-i> :action Forward<CR>
+
 :map <leader>t <Action>(ActivateTerminalToolWindow)
 :map <leader>n <Action>(ActivateProjectToolWindow)
 :map <leader>r <Action>(SelectInProjectView)
 
 set clipboard+=ideaput
-
