@@ -38,6 +38,12 @@ return {
     "saadparwaiz1/cmp_luasnip",
     "L3MON4D3/LuaSnip",
 
+    --
+    -- DAP
+    --
+    'mfussenegger/nvim-dap',
+    'rcarriga/nvim-dap-ui',
+
     -- Colorthemes
     -- TODO: stick to one of them  
     -- seems like the best due to a lot of optioins
