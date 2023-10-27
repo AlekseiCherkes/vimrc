@@ -150,7 +150,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end, opts)
 
         -- My ones
-        vim.keymap.set("n", "gs", vim.cmd.ClangSwitchSourceHeader)
+        vim.keymap.set("n", "gs", function() vim.cmd.ClangdSwitchSourceHeader() end)
 
     end,
 })
