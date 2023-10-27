@@ -76,6 +76,11 @@ return {
     "machakann/vim-highlightedyank",
     "wikitopian/hardmode",
     "chentoast/marks.nvim",
-    "ojroques/nvim-osc52"
+    "ojroques/nvim-osc52",
+    "nvim-lua/plenary.nvim",
+    {
+        'ThePrimeagen/harpoon',
+        lazy = true
+    }
 }
 
