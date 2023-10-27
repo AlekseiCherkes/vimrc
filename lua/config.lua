@@ -212,12 +212,6 @@ require'marks'.setup()
 -- key mappings
 --
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
 local nt = require('neo-tree.command')
 vim.keymap.set("n", "<leader>n", function() nt.execute({action = 'focus', source = 'filesystem', reveal = false}) end)
 vim.keymap.set("n", "<leader>r", function() nt.execute({action = 'focus', source = 'filesystem', reveal = true}) end)

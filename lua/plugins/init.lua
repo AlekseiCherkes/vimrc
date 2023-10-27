@@ -1,14 +1,11 @@
 return {
+    {
+        "nvim-lua/plenary.nvim",
+        lazy = true
+    },
     -- Essential
     {
         "williamboman/mason.nvim"
-    },
-    {
-        'nvim-telescope/telescope.nvim', 
-        versions = '0.1.x',
-        dependencies = {
-            "nvim-lua/plenary.nvim"
-        }
     },
     {
         'nvim-treesitter/nvim-treesitter', 
@@ -76,11 +73,6 @@ return {
     "machakann/vim-highlightedyank",
     "wikitopian/hardmode",
     "chentoast/marks.nvim",
-    "ojroques/nvim-osc52",
-    "nvim-lua/plenary.nvim",
-    {
-        'ThePrimeagen/harpoon',
-        lazy = true
-    }
+    "ojroques/nvim-osc52"
 }
 
