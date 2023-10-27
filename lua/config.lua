@@ -115,10 +115,14 @@ require('gitsigns').setup {
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+require("neodev").setup({})
+
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.clangd.setup {capabilities = capabilities}
 lspconfig.cmake.setup {}
+lspconfig.lua_ls.setup {}
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

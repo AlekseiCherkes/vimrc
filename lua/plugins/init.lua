@@ -69,10 +69,13 @@ return {
         config = true
     },
 
+    -- Plugin development
+    {'folke/neodev.nvim'},
+
     -- Other
-    "machakann/vim-highlightedyank",
-    "wikitopian/hardmode",
-    "chentoast/marks.nvim",
-    "ojroques/nvim-osc52"
+    'machakann/vim-highlightedyank',
+    'wikitopian/hardmode',
+    'chentoast/marks.nvim',
+    'ojroques/nvim-osc52'
 }
 
