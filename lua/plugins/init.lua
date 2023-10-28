@@ -70,7 +70,9 @@ return {
     },
 
     -- Plugin development
-    {'folke/neodev.nvim'},
+    {
+        'folke/neodev.nvim'
+    },
 
     -- Other
     'machakann/vim-highlightedyank',
