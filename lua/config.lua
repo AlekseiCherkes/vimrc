@@ -51,7 +51,7 @@ require("neo-tree").setup({
 
             -- remap '?' to g? like in vim-fugitive since I want to use it for navigation
             ['?'] = 'noop',
-            ['g?'] = 'show_help' 
+            ['g?'] = 'show_help'
         }
     },
     filesystem = {
@@ -68,7 +68,7 @@ require("neo-tree").setup({
 require('gitsigns').setup {
     -- Undocumented feature that I need
     -- https://github.com/lewis6991/gitsigns.nvim/issues/775
-    _signs_staged_enable = true, 
+    _signs_staged_enable = true,
 
     on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
@@ -159,7 +159,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
--- 
+--
 -- Completions (official example without modifications)
 --
 
@@ -206,7 +206,7 @@ cmp.setup {
   },
 }
 
--- 
+--
 -- Marks
 --
 

@@ -1,8 +1,8 @@
 return {
     {
         'mfussenegger/nvim-dap',
-        lazy = true, 
-        main = 'dap', 
+        lazy = true,
+        main = 'dap',
         init = function()
             vim.keymap.set('n', '<F5>', function () require('dap').continue() end, { desc = 'Debug: Start/Continue' })
             vim.keymap.set('n', '<F1>', function () require('dap').step_into() end, { desc = 'Debug: Step Into' })
@@ -11,7 +11,7 @@ return {
             vim.keymap.set('n', '<leader>m', function () require('dap').toggle_breakpoint() end, { desc = 'Debug: Toggle Breakpoint' })
             vim.keymap.set('n', '<leader>M', function() require('dap').set_breakpoint(vim.fn.input 'Breakpoint condition: ') end, { desc = 'Debug: Set Breakpoint' })
         end,
-        config = function() 
+        config = function()
             local dap = require('dap')
 
             dap.adapters.lldb = {
@@ -53,15 +53,15 @@ return {
                 },
             }
 
-            dap.listeners.after.event_initialized['dapui_config'] = function() 
+            dap.listeners.after.event_initialized['dapui_config'] = function()
                 require('dapui').open()
             end
 
-            dap.listeners.before.event_terminated['dapui_config'] = function() 
+            dap.listeners.before.event_terminated['dapui_config'] = function()
                 require('dapui').close()
             end
 
-            dap.listeners.before.event_exited['dapui_config'] = function() 
+            dap.listeners.before.event_exited['dapui_config'] = function()
                 require('dapui').close()
             end
 
