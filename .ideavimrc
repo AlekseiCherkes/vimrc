@@ -7,6 +7,7 @@ source ~/.vimrc
 Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
 
 " Fixes navigation history between files
 :nmap <C-o> :action Back<CR>
