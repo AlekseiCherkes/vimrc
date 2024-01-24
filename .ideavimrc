@@ -8,13 +8,22 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
 
 " Fixes navigation history between files
 :nmap <C-o> :action Back<CR>
 :nmap <C-i> :action Forward<CR>
 
 :map <leader>t <Action>(ActivateTerminalToolWindow)
-:map <leader>n <Action>(ActivateProjectToolWindow)
+:map <leader>n :NERDTreeToggle<CR>
 :map <leader>r <Action>(SelectInProjectView)
 
+:map gs <Action>(CIDR.Lang.SwitchHeaderSource)
+
+:map <leader>pb <Action>(CidrBuildRunToolbar)
+:map <leader>pr <Action>(Run)
+:map <leader>pd <Action>(Debug)
+
 set clipboard+=ideaput
+set ideamarks
+set ideajoin
