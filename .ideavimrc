@@ -20,6 +20,7 @@ Plug 'preservim/nerdtree'
 
 :map gs <Action>(CIDR.Lang.SwitchHeaderSource)
 
+:map <leader>pc <Action>(CMake.ReloadCMakeProject)
 :map <leader>pb <Action>(CidrBuildRunToolbar)
 :map <leader>pr <Action>(Run)
 :map <leader>pd <Action>(Debug)
