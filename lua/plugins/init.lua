@@ -36,15 +36,10 @@ return {
     "L3MON4D3/LuaSnip",
 
     -- Colorthemes
-    -- TODO: stick to one of them
-    -- seems like the best due to a lot of optioins
     {
         "projekt0n/github-nvim-theme",
         lazy = false,
         priority=1000,
-        config = function ()
-            vim.cmd([[colorscheme github_dark]])
-        end
     },
     {
         "morhetz/gruvbox",
@@ -75,9 +70,7 @@ return {
     },
 
     -- Other
-    'machakann/vim-highlightedyank',
     'wikitopian/hardmode',
     'chentoast/marks.nvim',
-    'ojroques/nvim-osc52'
 }
 
