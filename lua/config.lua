@@ -118,6 +118,7 @@ require("neodev").setup({})
 local lspconfig = require('lspconfig')
 lspconfig.clangd.setup {capabilities = capabilities}
 lspconfig.cmake.setup {}
+lspconfig.rust_analyzer.setup {}
 lspconfig.lua_ls.setup {}
 
 -- Use LspAttach autocommand to only map the following keys
