@@ -15,6 +15,7 @@ return {
             vim.keymap.set('n', '<leader>fg', function() bi().live_grep() end, { desc = "Live grep" })
             vim.keymap.set('n', '<leader>fb', function() bi().buffers() end, { desc = "Buffers" })
             vim.keymap.set('n', '<leader>fh', function() bi().help_tags() end, { desc = "Help tags" })
+            vim.keymap.set('n', '<leader>fk', function() bi().keymaps() end, { desc = "Keymaps" })
 
             -- My ones
             vim.keymap.set('n', '<leader>fj', function()
