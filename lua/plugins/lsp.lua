@@ -13,6 +13,15 @@ return {
             -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
             require("neodev").setup({})
 
+            -- Diagnostic display tuning
+            vim.diagnostic.config({
+                severity_sort = true,
+                float = {
+                    border = 'rounded',
+                    source = true,
+                },
+            })
+
             -- Setup language servers.
             vim.lsp.config('*', { capabilities = capabilities })
             vim.lsp.enable({ 'clangd', 'cmake', 'rust_analyzer', 'lua_ls' })
