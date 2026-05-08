@@ -6,7 +6,6 @@ source ~/.vimrc
 
 Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
-Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/argtextobj.vim'
 
