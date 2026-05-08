@@ -9,6 +9,7 @@ Plug 'dbakker/vim-paragraph-motion'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'vim-scripts/argtextobj.vim'
 
 " Fixes navigation history between files
 :nmap <C-o> :action Back<CR>

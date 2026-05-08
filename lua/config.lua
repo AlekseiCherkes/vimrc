@@ -115,11 +115,8 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("neodev").setup({})
 
 -- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.clangd.setup {capabilities = capabilities}
-lspconfig.cmake.setup {}
-lspconfig.rust_analyzer.setup {}
-lspconfig.lua_ls.setup {}
+vim.lsp.config('*', { capabilities = capabilities })
+vim.lsp.enable({ 'clangd', 'cmake', 'rust_analyzer', 'lua_ls' })
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
