@@ -37,12 +37,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
---
--- From old configuration with Packer
--- TODO: refactor
---
-
-require("config")
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 --
 -- Experimenting
