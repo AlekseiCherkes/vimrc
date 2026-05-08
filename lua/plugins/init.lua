@@ -14,8 +14,6 @@ return {
     },
 
     "tpope/vim-fugitive",
-    "vim-airline/vim-airline",
-    "vim-airline/vim-airline-themes",
     {
         "kylechui/nvim-surround",
         config = true
