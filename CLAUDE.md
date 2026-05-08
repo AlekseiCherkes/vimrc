@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal editor configuration shared across **Vim**, **Neovim**, **IdeaVim** (JetBrains IDEs), and **VSCode-Neovim**. The repo lives at `~/work/vimrc` and `scripts/install.sh` symlinks its files into `~/.vimrc`, `~/.ideavimrc`, and `~/.config/nvim` so editing here = editing live config.
 
+## Use case and priorities
+
+Neovim is used here primarily for quick ad-hoc file edits in the terminal and as the preferred `$EDITOR` / `$VISUAL`, **not** as a full IDE replacement — heavy development and debugging happen elsewhere (typically the JetBrains IDE driving `.ideavimrc`). Optimize this config for **simplicity, startup speed, and long-term stability** over feature breadth. The config is touched infrequently, so silent breakage between sessions is more costly than missing features: prefer plugins with stable APIs and core/built-in alternatives over churn-prone ones, and don't add machinery that isn't earning its keep.
+
 ## Layered configuration architecture
 
 Each editor sources a different entry point, but they share the common base in `.vimrc`. Understand the layering before editing:
