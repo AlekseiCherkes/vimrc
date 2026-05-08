@@ -14,6 +14,12 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 --
+-- Persistent undo across sessions
+--
+
+vim.opt.undofile = true
+
+--
 -- Intall Lazy.nvim
 --
 
