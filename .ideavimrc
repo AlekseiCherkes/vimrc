@@ -7,6 +7,7 @@ source ~/.vimrc
 Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/argtextobj.vim'
 
 " Fixes navigation history between files
