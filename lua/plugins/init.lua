@@ -4,7 +4,6 @@ return {
         lazy = true
     },
 
-    "tpope/vim-fugitive",
     {
         "kylechui/nvim-surround",
         config = true
