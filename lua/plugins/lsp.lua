@@ -1,6 +1,7 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        event = { "BufReadPre", "BufNewFile" },
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
             "folke/neodev.nvim",
@@ -50,8 +51,5 @@ return {
                 end,
             })
         end,
-    },
-    {
-        'folke/neodev.nvim',
     },
 }
