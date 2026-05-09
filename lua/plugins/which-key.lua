@@ -9,7 +9,8 @@ return {
         opts = {
             spec = {
                 { "<leader>f", group = "find (telescope)" },
-                { "<leader>h", group = "git hunks" },
+                { "<leader>g", group = "git hunks" },
+                { "<leader>c", group = "lsp code" },
                 { "<leader>w", group = "lsp workspace" },
                 { "<leader>t", group = "toggle" },
                 { "<leader>p", group = "project" },

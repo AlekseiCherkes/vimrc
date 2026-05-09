@@ -16,7 +16,6 @@ return {
             vim.keymap.set("n", "<leader>n", exec({ action = 'focus', source = 'filesystem', reveal = false }), { desc = "Neo-tree: filesystem" })
             vim.keymap.set("n", "<leader>r", exec({ action = 'focus', source = 'filesystem', reveal = true }),  { desc = "Neo-tree: reveal current file" })
             vim.keymap.set("n", "<leader>b", exec({ action = 'focus', source = 'buffers' }),                    { desc = "Neo-tree: buffers" })
-            vim.keymap.set("n", "<leader>g", exec({ action = 'focus', source = 'git_status' }),                 { desc = "Neo-tree: git status" })
         end,
         config = function()
             require("neo-tree").setup({

@@ -48,10 +48,10 @@ return {
                     bmap('n', '<space>wr',  vim.lsp.buf.remove_workspace_folder,                             "Remove workspace folder")
                     bmap('n', '<space>wl',  function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, "List workspace folders")
                     bmap('n', '<space>D',   vim.lsp.buf.type_definition,                                     "Type definition")
-                    bmap('n', '<space>rn',  vim.lsp.buf.rename,                                              "Rename")
+                    bmap('n', '<space>cr',  vim.lsp.buf.rename,                                              "Rename")
                     bmap({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action,                                 "Code action")
                     bmap('n', 'gr',         vim.lsp.buf.references,                                          "References")
-                    bmap('n', '<space>f',   function() vim.lsp.buf.format { async = true } end,             "Format buffer")
+                    bmap('n', '<space>cf',  function() vim.lsp.buf.format { async = true } end,             "Format buffer")
 
                     -- My ones
                     vim.keymap.set("n", "gs", function() vim.cmd.ClangdSwitchSourceHeader() end, { desc = "Switch C/C++ header/source" })
