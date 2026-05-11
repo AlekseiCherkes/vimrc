@@ -53,5 +53,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+require("lsp").setup()
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Project view (netrw)" })
 
