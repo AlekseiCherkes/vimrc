@@ -29,6 +29,24 @@ return {
                         -- free '?' for navigation, move help to g?
                         ['?'] = 'noop',
                         ['g?'] = 'show_help',
+
+                        -- Move the "order by" sub-menu from default 'o' prefix to 'O'
+                        -- so plain 'o' (open) fires without waiting for timeoutlen.
+                        ["oc"] = "none",
+                        ["od"] = "none",
+                        ["og"] = "none",
+                        ["om"] = "none",
+                        ["on"] = "none",
+                        ["os"] = "none",
+                        ["ot"] = "none",
+                        ["O"]  = { "show_help", config = { title = "Order by", prefix_key = "O" } },
+                        ["Oc"] = "order_by_created",
+                        ["Od"] = "order_by_diagnostics",
+                        ["Og"] = "order_by_git_status",
+                        ["Om"] = "order_by_modified",
+                        ["On"] = "order_by_name",
+                        ["Os"] = "order_by_size",
+                        ["Ot"] = "order_by_type",
                     },
                 },
                 filesystem = {
