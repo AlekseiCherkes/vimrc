@@ -1,7 +1,7 @@
 return {
     {
         'nvim-neo-tree/neo-tree.nvim',
-        branch = 'v2.x',
+        branch = 'v3.x',
         lazy = true,
         cmd = "Neotree",
         dependencies = {
@@ -19,32 +19,29 @@ return {
         end,
         config = function()
             require("neo-tree").setup({
+                source_selector = {
+                    winbar = true,
+                },
                 window = {
-                    filesystem = {
-                        use_libuv_file_watcher = true
-                    },
-                    source_selector = {
-                        winbar = true
-                    },
                     mappings = {
                         ["o"] = 'open',
                         ['/'] = 'noop',
-
-                        -- remap '?' to g? like in vim-fugitive since I want to use it for navigation
+                        -- free '?' for navigation, move help to g?
                         ['?'] = 'noop',
-                        ['g?'] = 'show_help'
-                    }
+                        ['g?'] = 'show_help',
+                    },
                 },
                 filesystem = {
+                    use_libuv_file_watcher = true,
                     window = {
                         mappings = {
                             -- disable fuzzy finder
                             ['I'] = 'toggle_hidden',
-                            ["/"] = "noop"
-                        }
-                    }
-                }
+                            ["/"] = "noop",
+                        },
+                    },
+                },
             })
         end,
-    }
+    },
 }
