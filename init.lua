@@ -20,7 +20,19 @@ vim.g.loaded_ruby_provider = 0
 vim.opt.undofile = true
 
 --
--- Intall Lazy.nvim
+-- Highlight yanked text briefly (Neovim-only, kept here instead of .vimrc
+-- because vim.highlight.on_yank doesn't exist in plain Vim/IdeaVim)
+--
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+    group = vim.api.nvim_create_augroup("HighlightYank", { clear = true }),
+    callback = function()
+        vim.highlight.on_yank({ higroup = 'Visual', timeout = 500 })
+    end,
+})
+
+--
+-- Install Lazy.nvim
 --
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

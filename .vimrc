@@ -84,6 +84,3 @@ if !has('ide') " Skip if in IdeaVim
     nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
 endif
 
-" highlight yank without plugins
-autocmd TextYankPost * silent! lua vim.highlight.on_yank { higroup='Visual', timeout=500 }
-
