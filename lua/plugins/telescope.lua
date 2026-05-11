@@ -17,12 +17,6 @@ return {
             vim.keymap.set('n', '<leader>fh', function() bi().help_tags() end, { desc = "Help tags" })
             vim.keymap.set('n', '<leader>fk', function() bi().keymaps() end, { desc = "Keymaps" })
             vim.keymap.set('n', '<leader>fG', function() bi().git_status() end, { desc = "Git status" })
-
-            -- My ones
-            vim.keymap.set('n', '<leader>fj', function()
-                require("telescope").load_extension('harpoon')
-                vim.cmd('Telescope harpoon marks')
-            end, { desc = "Harpoon marks" })
         end
     }
 }
