@@ -41,6 +41,7 @@ There is no test suite, build step, or linter wired up.
 ## Conventions worth knowing
 
 - Leader is `<space>`. Plugin keymaps cluster by prefix: `<leader>f*` Telescope, `<leader>g*` gitsigns hunks, `<leader>c*` LSP code (rename/action/format), `<leader>w*` LSP workspace, `<leader>p*` IDE project actions (IdeaVim only), `<leader>n/r/b` neo-tree views. `<leader>h` stays a leaf for `:noh` (defined in `.vimrc`).
+- **Two file managers on purpose, do not consolidate**: `neo-tree.nvim` is a persistent sidebar tree for browsing project structure (`<leader>n`/`<leader>r`/`<leader>b`); `oil.nvim` is a directory-as-buffer editor for fast in-place rename / create / delete (`-` opens the parent directory). Different workflows, both kept deliberately.
 - Every `vim.keymap.set(...)` call should include `{ desc = "..." }` — `:WhichKey` and the leader popup use it as the label, otherwise they fall back to showing the raw RHS function. Prefix groups themselves are registered in `lua/plugins/which-key.lua`'s `spec`.
 - `gs` is overloaded on purpose: in Neovim it calls `ClangdSwitchSourceHeader`; in IdeaVim it triggers the equivalent JetBrains action. Keep them in sync if rebinding.
 - The Russian `langmap` line in `.vimrc` lets normal-mode commands work with a Russian keyboard layout — don't strip it.
