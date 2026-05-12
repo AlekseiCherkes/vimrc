@@ -43,6 +43,9 @@ return {
                     end, { 'i', 's' }),
                 }),
                 sources = {
+                    -- lazydev injects Lua-API completions into Lua buffers;
+                    -- group_index = 0 suppresses duplicate raw lua_ls items.
+                    { name = 'lazydev', group_index = 0 },
                     { name = 'nvim_lsp' },
                 },
             }
