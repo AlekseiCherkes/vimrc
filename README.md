@@ -6,11 +6,46 @@ Personal configuration files for `Vim`/`Neovim`/`IdeaVim`
 
 - [NERDTree](https://github.com/JetBrains/ideavim/wiki/NERDTree-support#supported-commands)
 
-## Install
+## Install (fresh macOS)
 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AlekseiCherkes/vimrc/main/scripts/install.sh)"
-```
+Assumes [Homebrew](https://brew.sh) is already installed.
+
+1. Install the editors and runtime tools the config depends on:
+
+   ```
+   brew install neovim        # 0.12+ required by nvim-treesitter's main branch
+   brew install vim           # newer than macOS-bundled vim, used via ~/.vimrc
+   brew install git
+   brew install tree-sitter   # parser compiler invoked by :TSUpdate; needs >= 0.26.1
+   brew install ripgrep       # telescope live_grep
+   brew install fd            # telescope find_files (optional, faster than the default walker)
+   ```
+
+2. Install a Nerd Font so the icons in `lualine`, `neo-tree`, and `oil` render — otherwise you'll see boxes:
+
+   ```
+   brew install --cask font-jetbrains-mono-nerd-font
+   ```
+
+   Point your terminal (iTerm2 / Ghostty / Terminal.app) at the installed font.
+
+3. Install the LSP servers — see [LSP servers](#lsp-servers) below.
+
+4. Clone and symlink the config. The install script uses SSH to clone, so a working GitHub SSH key is required (or edit the script to use HTTPS):
+
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/AlekseiCherkes/vimrc/main/scripts/install.sh)"
+   ```
+
+5. Launch `nvim`. `lazy.nvim` bootstraps itself and installs every plugin; the `:TSUpdate` build step then compiles the tree-sitter parsers listed in `lua/plugins/treesitter.lua`. Wait for the install messages to finish, then restart Neovim once so the freshly built parsers are picked up.
+
+6. Sanity-check:
+
+   ```
+   :checkhealth            # general environment
+   :checkhealth lsp        # confirm the LSP servers actually attached
+   :Lazy                   # every plugin should show as installed
+   ```
 
 ## LSP servers
 

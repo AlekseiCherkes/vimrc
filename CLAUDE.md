@@ -31,7 +31,7 @@ When adding behavior, pick the *narrowest* layer that works — putting an edito
 ## Common operations
 
 - **Update plugins**: open Neovim, run `:Lazy sync`. Commit the resulting `lazy-lock.json` change.
-- **Install missing tree-sitter parsers**: handled automatically by `nvim-treesitter` (`auto_install = true`).
+- **Install missing tree-sitter parsers**: `nvim-treesitter` is on the `main` branch rewrite — no `auto_install`. The parser list lives in `lua/plugins/treesitter.lua` and is installed eagerly on startup; add a language by appending it there (or run `:TSInstall <lang>` ad-hoc). Highlight + indent are wired via a `FileType` autocmd in the same file; `vim.treesitter.start()` is pcalled so filetypes without a parser silently no-op.
 - **Install LSP servers**: managed via Homebrew (see `README.md`); Mason was intentionally removed.
 - **Apply local edits**: because installation symlinks the repo into `~/.config/nvim` etc., changes take effect on next editor start (or `:source %`) — no copy step.
 - **Fresh install on a new machine**: `bash scripts/install.sh` (clones to `~/work/vimrc` and creates symlinks).
